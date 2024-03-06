@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   
+    <title>Products | Koncco Studio E-Commerce</title>
+</head>
+<body>
+        <div id="menuBorder">
+            <img id="logoMenu" src="Images/logo konnco studio.png" alt="">
+            <hr>
+
+            <!-- <a href="dashboard page (admin).html">
+                <button id="menu_products">
+                    &nbsp;&nbsp;&nbsp; Dashboard
+                    <i class="bi bi-bar-chart-line-fill"></i>  
+                </button>
+            </a> -->
+
+            <a href="products page (admin).html">
+                <button class="active" id="menu1_products">
+                    &nbsp;&nbsp;&nbsp; Products
+                    <i class="bi bi-box-seam-fill"></i>  
+                </button>
+            </a>
+
+            <a id="signOutButton" href="login page.html">
+                Sign Out
+            </a>
+        </div> 
+
+        <input style="padding-left: 10px;" id="searchButton_admin" type="text" placeholder="Search" name="uname" required>
+        <a>
+            <i class="bi bi-search"></i>
+        </a>
+
+        <i class="bi bi-bell-fill"></i>
+
+        <p id="productsPage_label">Products</p>
+
+        <img id="admin_profilePicture" src="Images/carel.jpg">
+
+        <p id="adminUsername">Carel</p>
+        <p id="adminRole">ADMIN</p>
+
+        <div id="dropdownMenu">
+            <select name="CategoriesName" id="categories-names">
+                <option value="All">All Categories</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Beauty">Beauty</option>
+                <option value="Sport">Sport</option>
+                <option value="Sport">Others</option>
+            </select>
+        </div>
+
+        <h1 id="noProductAdded_h1">You haven't add any product yet</h1>
+
+        <button class="open-button" onclick="openForm()">Add new product</button>
+            <div id="overlay"></div>
+                <div class="form-popup" id="myForm">
+                    <!-- <form action="connect.php" class="form-container"> -->
+                    <form href="products page (admin).html" class="form-container">
+                        <h4>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            New Product
+                        </h4>
+                        <br>
+                        <label for="name"><b>Product Name</b></label>
+                        <input type="text" placeholder="Enter the product name" name="name" required>
+            
+                        <label for="quantity"><b>Quantity</b></label>
+                        <input type="text" placeholder="Enter the Quantity" name="quantity" required>
+            
+                        <label for="price"><b>Price</b></label>
+                        <input type="text" placeholder="Enter the price" name="price" required>
+            
+                        <label for="detail"><b>Details</b></label>
+                        <input type="text" placeholder="Enter the details" name="detail" required>
+            
+                        <label for="filename"><b>Image</b></label>
+                        <input type="file" id="myFile" name="filename">
+                        <br>
+                        <br>
+            
+                        <button type="submit" class="btn">Submit</button>
+                        <i class="bi bi-x-square-fill" onclick="closeForm()"></i>
+                    </form>
+                </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>        
+</body>
+</html>
